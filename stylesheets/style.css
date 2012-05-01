@@ -1,0 +1,59 @@
+code {
+	padding: 0 4px;
+	border: none;
+}
+
+div.post {
+	margin-top: 20px;	
+}
+
+.navbar img {
+	height: 30px;
+	margin: 5px;
+	float: right;
+}
+
+h1, #by{
+	margin-bottom: 20px;
+}
+
+#by {
+	margin-top: -20px;
+}
+
+div#bar {
+	width: 940px;
+	margin: 0px auto;
+}
+
+div#related {
+	margin-top: 20px;
+}
+
+.sbutton {
+	display: inline-block;
+    overflow: hidden;
+    width: 54px;
+}
+
+#pageshare {
+	height: 32px;
+	overflow: hidden;
+}
+
+.twitter {
+	margin-left: 22px;
+    position: relative;
+    top: 3px;
+}
+
+.plusone {
+	margin-left: 28px;
+    position: relative;
+    top: 7px;
+}
+
+div#license, div#email {
+	margin-top: 15px;
+    text-align: center;
+}

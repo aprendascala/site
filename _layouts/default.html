@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+    {% if page.description %}
+    <meta name="description" content="{{ page.description }}" />
+    {% endif %}
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" media="screen" href="/stylesheets/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" media="screen" href="/stylesheets/style.css" type="text/css" />
+    {% if site.feedburner %}
+    <link href="http://feeds.feedburner.com/{{ site.feedburner.id }}" rel="alternate" title="{{ site.title }}" type="application/atom+xml" />
+    {% endif %}
+    {% if site.google_analytics %}
+    <!-- google analytics async -->
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', '{{ site.google_analytics.account }}']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    {% endif %}
+  </head>
+  <body>
+		 <div class="navbar">
+    	<div class="navbar-inner">
+			  <div id="bar" class="container">
+			    		<a id="site-name" class="brand" href="/">{{ site.title }}</a>
+							<a href="http://feeds.feedburner.com/{{ site.feedburner.id }}"><img src="/images/feed.png" alt="feed" /></a>
+		    </div>
+		  </div>
+    </div>
+    <div class="container">
+		<div class="row">
+			<div class="span3">
+				<ul class="nav nav-stacked nav-tabs">
+					<li><a href="/">Home</a></li>
+  			    	<li><a href="/conceitos.html">Conceitos</a></li>
+  			    	<li><a href="/concorrencia.html">Concorrência</a></li>
+  			    	<li><a href="/estrutura-dados.html">Estruturas de Dados</a></li>
+  			    	<li><a href="/ferramentas.html">Ferramentas</a></li>
+  			    	<li><a href="/flags.html">Flags da JVM</a></li>
+  			    	<li><a href="/pitfalls.html">Pitfalls</a></li>
+  			    	<li><a href="/sobre.html">Sobre</a></li>
+				</ul>
+				<div id='pageshare'>
+					<div class='sbutton facebook'>
+						<fb:like layout="button_count" show_faces="false" font=""></fb:like>
+					</div>
+					<div class='sbutton twitter'>
+						<a href="http://twitter.com/share" class="twitter-share-button" data-count="none" >Tweet</a>
+					</div>
+					<div class='sbutton plusone'>
+						<g:plusone size="tall" annotation="none"></g:plusone>
+					</div>
+				</div>
+				<div id="license">
+					<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/br/">
+						<img alt="Licença Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/br/88x31.png" />
+					</a>
+				</div>
+				<div id="email">
+					Não encontrou o assunto que queria? Envie um email para <a href="mailto:jonas@vidageek.net">jonas@vidageek.net</a>
+				</div>
+			</div>
+ 	     	<div class="span9">
+    	    	{% if page.title %}<h1>{{ page.title }}</h1>{% endif %}
+	    	    {{ content }}
+	  	    </div>
+		</div>
+    </div>
+
+	<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+	<script src='http://platform.twitter.com/widgets.js' type="text/javascript"></script>
+	<script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+
+  {% if site.github %}
+    <a href="http://github.com/{{ site.github.username }}"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub" /></a>
+  {% endif %}
+  </body>
+</html>

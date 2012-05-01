@@ -1,0 +1,25 @@
+# standard jekyll configuration
+
+permalink: date
+pygments: true
+exclude: ['Rakefile', 'README.md', 'config.rb', 'deploy.sh']
+markdown: rdiscount
+
+# configuration required for some pages
+
+domain: www.aprendascala.com.br
+title: Aprenda Scala
+
+# configuration for ehancements, uncomment to enable
+
+#feedburner:
+#  id: 
+
+google_analytics:
+  account: UA-1508082-7
+
+# github:
+#   username: ghusername
+
+#disqus:
+#  id: 
