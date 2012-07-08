@@ -1,0 +1,4 @@
+implicit object para controlar uso de método (TraversableOnce.sum)
+controlar uso de método usando structural typing (Parecido com TO.sum)
+package é super legal
+
