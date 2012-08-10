@@ -1,0 +1,18 @@
+
+- home do plugin: https://github.com/remeniuk/sbt-netbeans-plugin
+
+- falar também da versão do sbt ....
+
+- instalando sbt-netbeans-plugin
+Edite ou crie o arquivo plugins.sbt, na pasta project, na raiz da aplicação. Dentro deste arquivo acrescente:
+
+resolvers += "remeniuk repo" at "http://remeniuk.github.com/maven"
+
+libraryDependencies += "org.netbeans" %% "sbt-netbeans-plugin" % "0.1.4"
+
+- usando sbt-netbeans-plugin
+
+netbeans create
+netbeans remove
+
+- Além disso, provavelmente vai ser uma boa idéia adicionar a pasta nbproject e o arquivo build.xml que o plugin gera na lista de arquivos ignorados da sua ferramenta de controle de versão.
