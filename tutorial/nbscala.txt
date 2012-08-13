@@ -1,0 +1,7 @@
+
+- clonar o repo nbscala no github
+
+- baixar os nbms na sourceforge
+
+- instalar no netbeans, nos plugins, aba downloaded
+
