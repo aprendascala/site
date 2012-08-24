@@ -1,7 +1,10 @@
 
-- clonar o repo nbscala no github
+- baixar os nbms na sourceforge, para a sua versão do netbeans
 
-- baixar os nbms na sourceforge
+- se o netbeans for muito novo, pode não haver nbms prontos lá
+ - se for esse o caso:
+  - clonar o repo nbscala no github
+  - usar os nbms do snapshot atual que estão na raiz do projeto
 
 - instalar no netbeans, nos plugins, aba downloaded
 
