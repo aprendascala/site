@@ -5,7 +5,7 @@ permalink: /covariancia-contravariancia.html
 category: tipos
 ---
 
-Recentemente consegui entender como funciona [Covariância][1] e [Contravariância][1]. 
+Recentemente consegui entender (um pouco) como funciona [Covariância][1] e [Contravariância][1]. 
 
 Em Scala, covariância pode ser denotada por `+T` (T é o tipo). Isso significa, que T pode ser **substituído**
 por qualquer outro tipo que seja um filho dele. Por exemplo:
@@ -33,7 +33,7 @@ E, para complementar, invariância exige que você **substitua** apenas pelo mes
 	  val c : Invariancia[AnyRef] = new Invariancia[Any] // Não Compila
 	}
 
-Uma coisa que é muito importante notar, é que isso é referente aos tipos genéricos e não à atribuição de variáveis,
+Uma coisa que é muito importante notar, é que isso se refere aos tipos genéricos e não à atribuição de variáveis,
 retornos de métodos ou parâmetros passados à funções/métodos (isso confundiu a minha cabeça por muito tempo):
 
 	class AtribuicaoInvariante[T](t : T) {
@@ -90,6 +90,24 @@ Já os **parâmetros declarados nos métodos** são invariantes:
 	
 	class TestAnyAny extends ParametroInvariante {
 	  override def metodo(v : Any) = "" // Não compila
+	}
+
+Uma coisa que ainda não está clara é se existe alguma razão para eles não serem contravariantes ou se simplesmente
+não seria muito útil mesmo.
+
+Um uso bem interessante de tipos Covariantes e Contravariantes em Scala é a trait Function1, cuja declaração é mais
+ou menos assim:
+
+	trait Function1[-T1, +R] extends AnyRef {
+	  def apply(v1 : T1) : R
+	}
+
+Essa declaração permite coisas como:
+
+	class Function1Test {
+	  val f1 : AnyRef => AnyRef = (a : Any) => "".asInstanceOf[AnyRef]
+	  val f2 : AnyRef => AnyRef = (a : AnyRef) => ""
+	  val f3 : AnyRef => AnyRef = (a : Any) => ""
 	}
 
 [1]: http://en.wikipedia.org/wiki/Covariance_and_contravariance_(computer_science)
