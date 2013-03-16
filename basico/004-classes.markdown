@@ -23,6 +23,7 @@ o nome da classe. Então, para instanciar a ClasseScala de executar:
 	new ClassScala(100)
 
 Scala possui um recurso chamado de `case class` que, além de definir a classe, ainda gera um monte de coisas úteis:
+
 * Um método `toString` mais bonitinho
 * `hashCode` e `equals` com base nos atributos declarados no construtor
 * Métodos de acesso aos atributos declarados no construtor (o padrão em uma `class` é ser privado)
