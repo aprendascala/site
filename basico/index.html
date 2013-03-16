@@ -1,0 +1,12 @@
+---
+layout: default
+title: Exercícios Básicos
+---
+
+<ol>
+{% for page in site.pages %}
+	{% if page.group == 'basico' %}
+		<li><a href="{{ page.url }}">{{ page.title }}</a></li>
+	{% endif %}
+{% endfor %}
+</ol>
