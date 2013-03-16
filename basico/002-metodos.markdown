@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Métodos
-permalink: /basico/metodos.html
 group: basico
 ---
 

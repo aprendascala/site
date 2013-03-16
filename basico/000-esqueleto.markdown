@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Esqueleto
-permalink: /basico/esqueleto.html
 group: basico
 ---
 
